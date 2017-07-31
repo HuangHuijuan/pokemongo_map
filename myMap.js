@@ -35,7 +35,7 @@ function get_pokemon_layer_from_map_items(map_items) {
     for (var i in map_items) {
         var map_item = map_items[i];
         var pushpin = new Microsoft.Maps.Pushpin(
-            new Microsoft.Maps.Location(Number(map_item["latitude"]), Number(map_item["longitude"]),
+            new Microsoft.Maps.Location(Number(map_item["latitude"]), Number(map_item["longitude"])),
             {
                 icon: './images/pokemon/' + map_item['pokemon_id'] + '.png',
                 title: get_counter_down_time_from_expire_epoch(map_item["expire"]),
